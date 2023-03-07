@@ -11,29 +11,6 @@ async function getData(params) {
 
 getActivityBtn.addEventListener("click", async () => {
 
-    // // min lösning
-    // let radioBtn = document.querySelector('input[name="numberOfParticipants"]:checked');
-    // let select = document.querySelector("#typOfActivity");
-    // let freeActivity = document.querySelector("#freeActivity")
-
-    // let participants = "";
-    // let type = "";
-    // let price = "";
-
-    // radioBtn ? participants = radioBtn.id : "";
-    // select ? type = select.value : "";
-    // freeActivity.checked ? price = 0 : "";
-
-    // let params = new URLSearchParams({
-    //     participants,
-    //     type,
-    //     price
-    // })
-    // data = await getData(params);
-    // console.log(params.toString())
-    // displayData(data);
-
-
     //uppdaterad lösning
     let radioBtn = document.querySelector('input[name="numberOfParticipants"]:checked');
     let select = document.querySelector("#typOfActivity");
@@ -57,14 +34,15 @@ function displayData(data) {
         showActivityDiv.innerHTML = `<h2>${activity}</h2>
         <p>Participants: ${participants}<br>
         Typ of activity: ${type}<br>
-        Cost: $${price}</p>`
+        `
+        // Cost: $${price}</p>
     } else {
         showActivityDiv.innerHTML = `<h1>${data.error}</h1>`
     }
 }
 
+
 const filter = document.getElementById("filter");
-console.log(filter)
 
 filter.addEventListener("click", () => {
     const toggleDiv = document.getElementById("toggleDiv");
