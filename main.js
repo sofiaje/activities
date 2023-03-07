@@ -47,14 +47,14 @@ getActivityBtn.addEventListener("click", async () => {
 
     data = await getData(params);
     displayData(data);
-    console.log(params.toString())
+    // console.log(params.toString())
 })
 
 
 function displayData(data) {
     let { activity, participants, type, price } = data
     if (activity) {
-        showActivityDiv.innerHTML = `<h1>${activity}</h1>
+        showActivityDiv.innerHTML = `<h2>${activity}</h2>
         <p>Participants: ${participants}<br>
         Typ of activity: ${type}<br>
         Cost: $${price}</p>`
@@ -62,3 +62,11 @@ function displayData(data) {
         showActivityDiv.innerHTML = `<h1>${data.error}</h1>`
     }
 }
+
+const filter = document.getElementById("filter");
+console.log(filter)
+
+filter.addEventListener("click", () => {
+    const toggleDiv = document.getElementById("toggleDiv");
+    toggleDiv.classList.toggle("hidden")
+})
