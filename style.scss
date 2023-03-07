@@ -1,0 +1,26 @@
+// * {
+//     padding: 0;
+//     margin: 0;
+// }
+
+#showActivityDiv{
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid;
+
+    max-width: 800px;
+}
+
+// buttons
+button {
+    cursor: pointer;
+}
+
+#getActivityBtn {
+    padding: 0.5rem;
+}
+
+// form
+select {
+ margin: 0.5rem 0;
+}
