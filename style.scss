@@ -55,9 +55,10 @@ input[type='checkbox'] {
     accent-color: teal;
     width: 20px;
     height: 20px;
-    margin-left: 1rem;
 }
-
+label {
+    margin-right: 1rem;
+}
 .freeDiv {
     display: flex;
     align-items: center;
